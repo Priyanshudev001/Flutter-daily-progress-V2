@@ -1,7 +1,6 @@
 void main() {
-  dynamic priyanshu = 'tero baba';
-  print(priyanshu);
-
-  priyanshu = 12;
-  print(priyanshu);
+  final someValue1 = DateTime.now();
+  const someValuee2 = '12';
+  print(someValue1);
+  print(someValuee2);
 }
