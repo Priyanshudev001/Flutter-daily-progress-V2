@@ -1,7 +1,7 @@
 void main() {
-  String Priyanshu = "Tero, bau";
-  print(Priyanshu);
+  dynamic priyanshu = 'tero baba';
+  print(priyanshu);
 
-  Priyanshu = "$Priyanshu tero baba";
-  print(Priyanshu);
+  priyanshu = 12;
+  print(priyanshu);
 }
