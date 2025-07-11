@@ -1,9 +1,22 @@
 void main() {
-  String name = 'Priyanshu';
-  printName(greeting: 'Hello', name: name, age: 14);
+  final cookie = Cookie();
+  print(cookie.shape);
+  cookie.shape = 'Rectangle';
+  print(cookie.shape);
 }
+class Cookie {
 
-void printName(int age,{required String name , required String greeting}) {
-  print(name);
-  print(age);
+  //variable
+  String shape = "cirlce";
+  double size = 15.9; //cm
+
+  //method
+  void baking() {
+    print('Baking ha started');
+  }
+
+  //bool
+  bool isCooling() {
+    return false;
+  }
 }
