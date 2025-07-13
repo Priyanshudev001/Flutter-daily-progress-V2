@@ -1,22 +1,24 @@
 void main() {
-  final cookie = Cookie();
-  print(cookie.shape);
-  cookie.shape = 'Rectangle';
-  print(cookie.shape);
+  final cookie = Cookie(shape: 'Hello', size: 20);
 }
 class Cookie {
+  final String shape;
+  final double size;
 
-  //variable
-  String shape = "cirlce";
-  double size = 15.9; //cm
+  Cookie({required this.shape, required this.size}) {
+    baking();
+  }
+  int _height = 4;
+  int _width = 5;
 
-  //method
+  int calculateSize() {
+    return _height * _width;
+  }
+
   void baking() {
-    print('Baking ha started');
+    print('hello mf k xa ?');
   }
-
-  //bool
-  bool isCooling() {
-    return false;
-  }
+}
+bool isCooling() {
+  return false;
 }
