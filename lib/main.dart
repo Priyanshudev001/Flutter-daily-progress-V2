@@ -2,36 +2,24 @@ void main() {
   // Inhertitance
   // Objecr Oriented Programming (OOP)
 
-  Car car = Car();
-  print(car.isEngineWorking);
-  print(car.noOfWheels);
-
-  Truck truck = Truck();
-  print(truck.isEngineWorking);
-  print(truck.noOfWheels);
+  final car = Car();
+  car.accelerate();
 }
 
-class Vehicle {
-  int speed = 10;
-  bool isEngineWorking = false;
-  bool isLightOn = true;
+abstract class Vehicle {
+  void accelerate();
+}
 
+class Car implements Vehicle {
+  @override
   void accelerate() {
-    speed += 10;
+    print("accelerating");
   }
 }
 
-class Car extends Vehicle {
-  int noOfWheels = 4;
-  void printSomething() {
-    print(noOfWheels);
-  }
-}
-
-class Truck extends Vehicle {
-  int noOfWheels = 4;
-  bool isEngineWorking = true;
-  void printSomething() {
-    print(noOfWheels);
+class Truck implements Vehicle {
+  @override
+  void accelerate(){
+    print("hello");
   }
 }
