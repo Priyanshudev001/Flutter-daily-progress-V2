@@ -1,25 +1,31 @@
 void main() {
-  // Inhertitance
-  // Objecr Oriented Programming (OOP)
-
-  final car = Car();
-  car.accelerate();
+  // Object Oriented Programming (OOP)
+  // Polymorphism
+  Animal dog = Dog();
+  dog.sound();
+  dog = Cat();
+  dog.sound();
+  // Abstraction
+  // Inheritance
+  // Encapsulation
 }
 
-abstract class Vehicle {
-  void accelerate();
-}
-
-class Car implements Vehicle {
-  @override
-  void accelerate() {
-    print("accelerating");
+class Animal {
+  void sound() {
+    print("Animal making sound");
   }
 }
 
-class Truck implements Vehicle {
+class Cat extends Animal {
   @override
-  void accelerate(){
-    print("hello");
+  void sound() {
+    print("Cat making sound");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void sound() {
+    print("Dog making sound");
   }
 }
