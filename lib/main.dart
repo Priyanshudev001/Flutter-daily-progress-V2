@@ -1,36 +1,20 @@
 void main() {
-  // Object Oriented Programming (OOP)
-  // Polymorphism
-  // Animal dog = Dog();
-  // Animal cat = Cat();
-  // dog.sound();
-  // dog = Cat();
-  // cat.sound();
-
-
-  // Abstraction
-  Animal anim = Cat();
-  anim.sound();
-  Animal anim2 = Dog();
-  anim2.sound();
-  // Inheritance
-  // Encapsulation
+  final animal = Animal();
+  animal.function();
 }
 
-abstract class Animal {
-  void sound();
+mixin Jump {
+  int jumping = 10;
+}
+mixin Scream {
+  bool isScreaming = false;
 }
 
-class Cat extends Animal {
-  @override
-  void sound() {
-    print("Cat making sound");
+class Animal with Jump, Scream  {
+  void function() {
+    print(jumping);
+    print(isScreaming);
   }
 }
 
-class Dog extends Animal {
-  @override
-  void sound() {
-    print("Dog making sound");
-  }
-}
+mixin class Cat {}
