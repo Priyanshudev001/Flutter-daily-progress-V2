@@ -1,20 +1,19 @@
+// Angular bracket
 void main() {
-  final animal = Animal();
-  animal.function();
+  // List
+  // 10, 20, 30
+
+  //   List marks = [10, 20, 30, 03, 40, 04];
+  //   print(marks[0]);
+  final student = Student<String>("25");
+  print(student.name);
 }
 
-mixin Jump {
-  int jumping = 10;
-}
-mixin Scream {
-  bool isScreaming = false;
-}
+class Student<T> {
+  final T name;
 
-class Animal with Jump, Scream  {
-  void function() {
-    print(jumping);
-    print(isScreaming);
+  Student(this.name);
+  void setName(T name) {
+    print("New name: $name");
   }
 }
-
-mixin class Cat {}
