@@ -1,19 +1,29 @@
-// Angular bracket
 void main() {
   // List
-  // 10, 20, 30
+  // [10, 20, 30]
 
-  //   List marks = [10, 20, 30, 03, 40, 04];
-  //   print(marks[0]);
-  final student = Student<String>("25");
-  print(student.name);
+  List<Student> students = [
+    Student("Priyanshu", 10),
+    Student("Messi", 20),
+    Student("Ronaldo", 30),
+    Student("Mbape", 40),
+  ];
+
+  print(students);
+
+  List<Student> filteredStudents = [];
+  for (int i=0; i<students.length; i++) {
+    if (students[i].marks >= 20) {
+      filteredStudents.add(students[i]);
+    }
+  } 
+  print( filteredStudents);
 }
 
-class Student<T> {
-  final T name;
-
-  Student(this.name);
-  void setName(T name) {
-    print("New name: $name");
-  }
-}
+class Student {
+  final String name;
+  final int marks;
+  Student(this.name, this.marks);
+  @override
+  String toString() => 'Student : $name';
+} 
