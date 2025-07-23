@@ -3,17 +3,13 @@ void main() {
 
   final list = [10, 20, 30];
 
-  Map<String, int> marks = {'Priyanshu': 10, 'cat': 20, 'tata': 30};
+  Map<int, String> marks = {10: "10", 20: "20", 30: "30"};
 
-  if (marks['pagal']?.isEven == null) {
-    print('Key does not exist');
-  }
-    else{
-      print(marks['pagal']!.isEven);
-    
-    }
-  }
-
+  final anotherMap = {23: "22", 12: "3", 122: "hi"};
+  marks.addAll(anotherMap);
+  marks.remove(122);
+  print(marks);
+}
 
 class Student {
   final String name;
