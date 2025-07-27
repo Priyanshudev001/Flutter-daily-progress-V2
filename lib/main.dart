@@ -1,35 +1,31 @@
 void main() {
-  // A list of student marks as maps
-  List<Map<String, int>> marks = [
-    {
-      'Math': 10,
-      'Computer': 30,
-      'Science': 20,
-    },
-    {
-      'Math': 10,
-      'Computer': 30,
-      'Science': 20,
-    },
-    {
-      "Math": 10,
-      "Science": 20,
-      "Computer": 30,
-    },
-  ];
+  //Enums
 
-  // Iterating over each map in the list
-  marks.map((e) {
-    print(e);
-  }).toList();
+  final employee1 = Employee("Priyanshu", EmployeeType.doctor);
+  final employee2 = Employee("Priyanshu", EmployeeType.finance);
+
+  final employee3 = Employee("Sonal", EmployeeType.marketing);
+  employee1.fn();
+  employee2.fn();
+  employee3.fn();
 }
 
-class Student {
+enum EmployeeType { doctor, finance, marketing }
+
+class Employee {
   final String name;
-  final int marks;
+  final EmployeeType type;
 
-  Student(this.name, this.marks);
+  Employee(this.name, this.type);
 
-  @override
-  String toString() => 'Student : $name';
+  void fn() {
+    switch (type) {
+      case EmployeeType.doctor:
+        print("Doctor");
+      case EmployeeType.finance:
+        print("Finance");
+      case EmployeeType.marketing:
+        print("marketing");
+    }
+  }
 }
