@@ -4,10 +4,10 @@ void main() {
 
   try {
     print(10 ~/ 0);
+  } on Exception catch (e) {
+    print(e);
   } catch (e) {
-    print('some error occurered');
-  } finally {
-    print('Finally block executed');
+    print('ann error occurred');
   }
-  print("Hello brother");
+  print('Priyanshu');
 }
