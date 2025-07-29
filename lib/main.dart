@@ -10,7 +10,14 @@ void main() {
   employee3.fn();
 }
 
-enum EmployeeType { doctor, finance, marketing }
+enum EmployeeType {
+  doctor(122),
+  finance(213),
+  marketing(213);
+
+  final int salary;
+  const EmployeeType(this.salary);
+}
 
 class Employee {
   final String name;
@@ -19,13 +26,6 @@ class Employee {
   Employee(this.name, this.type);
 
   void fn() {
-    switch (type) {
-      case EmployeeType.doctor:
-        print("Doctor");
-      case EmployeeType.finance:
-        print("Finance");
-      case EmployeeType.marketing:
-        print("marketing");
-    }
+    print("${type.name} ${type.salary}");
   }
 }
