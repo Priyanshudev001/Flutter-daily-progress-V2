@@ -1,9 +1,11 @@
-void main() async {
+void main() {
   //Future
 
   print("Janwi");
-  final okay = await giveAResultAfter2Sec();
-  print(okay);
+  giveAResultAfter2Sec().then((val) {
+    print(val);
+  });
+  print("okay");
 
   print('Hey');
   print('Hello');
@@ -11,7 +13,7 @@ void main() async {
 }
 
 Future<String> giveAResultAfter2Sec() {
-  return Future.delayed(Duration(seconds: 2), () async{
+  return Future.delayed(Duration(seconds: 2), () async {
     return 'Heyy 1111';
   });
 }
