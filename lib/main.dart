@@ -1,19 +1,15 @@
-void main() {
-  //Future
+import 'package:http/http.dart' as http;
 
-  print("Janwi");
-  giveAResultAfter2Sec().then((val) {
-    print(val);
-  });
-  print("okay");
 
-  print('Hey');
-  print('Hello');
-  print('Gretting !!! ');
+void main() async {
+  var url = Uri.parse("https://jsonplaceholder.typicode.com/users");
+  final res = await http.get(url);
+
+  print(res.body);
 }
 
-Future<String> giveAResultAfter2Sec() {
-  return Future.delayed(Duration(seconds: 2), () async {
-    return 'Heyy 1111';
-  });
-}
+// Future<String> giveAResultAfter2Sec() {
+//   return Future.delayed(Duration(seconds: 2), () async {
+//     return 'Heyy 1111';
+//   });
+// } 
