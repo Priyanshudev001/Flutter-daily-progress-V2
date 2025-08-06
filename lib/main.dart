@@ -1,18 +1,27 @@
+import 'dart:async';
 void main() async {
-  countDown().listen(
-    (val) {
-      print(val);
-    },
-    onDone: () {
-      print("HEY I HAVE COMPLETED It!!!");
-    },
-  );
-  print('Hiii');
+  countDown();
 }
+  void countDown() {
+    final Controller = StreamController<int>();
 
-Stream<int> countDown() async* {
-  for (int i = 5; i > 0; i--) {
-    yield i;
-    await Future.delayed(Duration(seconds: 1));
+    Controller.sink.add(1);
+    Controller.sink.add(2);
+    Controller.sink.add(3);
+    Controller.sink.add(4);
+    Controller.sink.add(5);
+    Controller.sink.add(6);
+    Controller.sink.add(7);
+    Controller.sink.close();
+
+    Controller.stream.listen(
+      (val) {
+        print(val);
+      },
+      onError: (err) {
+        print(err);
+      },
+    );
+    Controller.close();
   }
-}
+
