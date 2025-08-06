@@ -1,15 +1,18 @@
-import 'package:http/http.dart' as http;
-
-
 void main() async {
-  var url = Uri.parse("https://jsonplaceholder.typicode.com/users");
-  final res = await http.get(url);
-
-  print(res.body);
+  countDown().listen(
+    (val) {
+      print(val);
+    },
+    onDone: () {
+      print("HEY I HAVE COMPLETED It!!!");
+    },
+  );
+  print('Hiii');
 }
 
-// Future<String> giveAResultAfter2Sec() {
-//   return Future.delayed(Duration(seconds: 2), () async {
-//     return 'Heyy 1111';
-//   });
-// } 
+Stream<int> countDown() async* {
+  for (int i = 5; i > 0; i--) {
+    yield i;
+    await Future.delayed(Duration(seconds: 1));
+  }
+}
