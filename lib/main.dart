@@ -1,5 +1,3 @@
-
-
 void main() {
   final jsoned = {
     "userId": 1,
@@ -8,9 +6,15 @@ void main() {
     "body": "ah sanchai xu halanagar",
   };
 
-  final {'userId': userId, 'title': title, 'body': b} = jsoned;
-
-  print(userId);
-  print(title);
-  print(b);
+  if (jsoned case {
+    'userId': String userId,
+    'title': String title,
+    'body': String b,
+  }) {
+    print(userId);
+    print(title);
+    print(b);
+  } else {
+    print("INcorrect JSON");
+  }
 }
