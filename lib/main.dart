@@ -1,5 +1,16 @@
+
+
 void main() {
-  final list = [1, 2, 2,3,3,3,3,3,3,4,4,4 ];
-  final [a, b, c, ...e] = list;
-  print('$a $b $c $e');
+  final jsoned = {
+    "userId": 1,
+    "id": 1,
+    "title": "k xa halkhbar sanchai xau",
+    "body": "ah sanchai xu halanagar",
+  };
+
+  final {'userId': userId, 'title': title, 'body': b} = jsoned;
+
+  print(userId);
+  print(title);
+  print(b);
 }
