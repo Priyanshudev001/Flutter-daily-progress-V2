@@ -1,20 +1,16 @@
 void main() {
-  final jsoned = {
-    "userId": 1,
-    "id": 1,
-    "title": "k xa halkhbar sanchai xau",
-    "body": "ah sanchai xu halanagar",
-  };
+  String motivation = "this is a good wolrd";
 
-  if (jsoned case {
-    'userId': String userId,
-    'title': String title,
-    'body': String b,
-  }) {
-    print(userId);
-    print(title);
-    print(b);
-  } else {
-    print("INcorrect JSON");
+  motivation = motivation.capitaliseFirstLetter();
+  print(motivation);
+
+  String name = "priyanshu";
+  name = name.capitaliseFirstLetter();
+  print(name);
+}
+
+extension CapitaliseFirstLetter on String {
+  String capitaliseFirstLetter() {
+    return this[0].toUpperCase() + this.substring(1);
   }
 }
