@@ -1,16 +1,16 @@
+import 'package:flutter/cupertino.dart';
+
 void main() {
-  String motivation = "this is a good wolrd";
-
-  motivation = motivation.capitaliseFirstLetter();
-  print(motivation);
-
-  String name = "priyanshu";
-  name = name.capitaliseFirstLetter();
-  print(name);
+  runApp(MyApp());
 }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-extension CapitaliseFirstLetter on String {
-  String capitaliseFirstLetter() {
-    return this[0].toUpperCase() + this.substring(1);
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Hello Priyanshu",
+      textDirection: TextDirection.rtl,
+    );
   }
 }
