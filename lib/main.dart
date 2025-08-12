@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_daily_progress_v2/currency_coverter_materal_page.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    //Widget Tree
-    return MaterialApp(
-      home: Scaffold(
-      body: Center(
-        child: Text("Hello Priyanshu ")),
-    ),);
+    return MaterialApp(home: CurrencyCoverterMateralPage());
   }
 }
