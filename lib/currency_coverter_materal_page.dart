@@ -6,11 +6,13 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
+      body:  ColoredBox(
+    color: Colors.black,
+        child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [Text('0')],
-      ),
+      ),) 
     );
   }  
 }
