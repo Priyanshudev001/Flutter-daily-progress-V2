@@ -5,8 +5,17 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
+    final border = OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.black,
+        width: 2,
+        style: BorderStyle.solid,
+        strokeAlign: BorderSide.strokeAlignOutside,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(5)),
+    );
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 45, 122, 186),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,6 +27,19 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
+              ),
+            ),
+            TextField(
+              style: TextStyle(color: Colors.black),
+              decoration: InputDecoration(
+                hintText: 'please enter the amount in USD',
+                hintStyle: TextStyle(color: Colors.grey),
+                prefixIcon: Icon(Icons.monetization_on),
+                prefixIconColor: Colors.black,
+                filled: true,
+                fillColor: Colors.white,
+                focusedBorder: border,
+                enabledBorder: border,
               ),
             ),
           ],
