@@ -31,6 +31,7 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
