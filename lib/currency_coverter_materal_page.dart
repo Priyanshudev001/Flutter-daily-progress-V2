@@ -29,17 +29,21 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
-            TextField(
-              style: TextStyle(color: Colors.black),
-              decoration: InputDecoration(
-                hintText: 'please enter the amount in USD',
-                hintStyle: TextStyle(color: Colors.grey),
-                prefixIcon: Icon(Icons.monetization_on),
-                prefixIconColor: Colors.black,
-                filled: true,
-                fillColor: Colors.white,
-                focusedBorder: border,
-                enabledBorder: border,
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              child: TextField(
+                style: TextStyle(color: Colors.black),
+                decoration: InputDecoration(
+                  hintText: 'please enter the amount in USD',
+                  hintStyle: TextStyle(color: Colors.grey),
+                  prefixIcon: Icon(Icons.monetization_on),
+                  prefixIconColor: Colors.black,
+                  filled: true,
+                  fillColor: Colors.white,
+                  focusedBorder: border,
+                  enabledBorder: border,
+                ),
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
             ),
           ],
