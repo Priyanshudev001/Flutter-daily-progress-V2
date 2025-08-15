@@ -47,6 +47,12 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
             ),
+            TextButton(
+              onPressed: () {
+                print('buttom clicked');
+              },
+              child: Text('Click Me'),
+            ),
           ],
         ),
       ),
