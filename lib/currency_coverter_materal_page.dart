@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CurrencyCoverterMateralPage extends StatelessWidget {
@@ -49,7 +50,9 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                print('buttom clicked');
+                if (kDebugMode) {
+                  print('buttom clicked');
+                }
               },
               child: Text('Click Me'),
             ),
