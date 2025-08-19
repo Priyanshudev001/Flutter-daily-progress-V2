@@ -16,6 +16,12 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
       borderRadius: BorderRadius.all(Radius.circular(5)),
     );
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Currency Converter"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 45, 122, 186),
+        elevation: 0,
+      ),
       backgroundColor: Color.fromARGB(255, 45, 122, 186),
       body: Center(
         child: Column(
