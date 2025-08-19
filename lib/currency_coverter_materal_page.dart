@@ -48,13 +48,25 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                if (kDebugMode) {
-                  print('buttom clicked');
-                }
-              },
-              child: Text('Click Me'),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextButton(
+                onPressed: () {
+                  if (kDebugMode) {
+                    print('buttom clicked');
+                  }
+                },
+
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
+                child: const Text('Convert'),
+              ),
             ),
           ],
         ),
