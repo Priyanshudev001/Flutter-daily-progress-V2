@@ -49,8 +49,8 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextButton(
+              padding: const EdgeInsets.fromLTRB(10, 7, 10, 10),
+              child: ElevatedButton(
                 onPressed: () {
                   if (kDebugMode) {
                     print('buttom clicked');
@@ -58,6 +58,7 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
                 },
 
                 style: TextButton.styleFrom(
+                  elevation: 10,
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
                   minimumSize: Size(double.infinity, 50),
