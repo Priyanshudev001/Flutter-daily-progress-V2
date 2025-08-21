@@ -1,11 +1,28 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class CurrencyCoverterMateralPage extends StatelessWidget {
-  const CurrencyCoverterMateralPage({super.key});
+class CurrencyConverterPage extends StatefulWidget {
+  CurrencyConverterPage({super.key}) {
+    print('constructor');
+  }
+
+  @override
+  State<CurrencyConverterPage> createState() => _CurrencyConverterPageState();
+}
+
+class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
+  late double results;
+
+  @override
+  void initState() {
+    super.initState();
+    print('rebuilt');
+  }
 
   @override
   Widget build(BuildContext context) {
+    print('build fn');
+    double result = 0.1;
+    final TextEditingController textEditingController = TextEditingController();
     final border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.black,
@@ -29,7 +46,7 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
 
           children: [
             Text(
-              '0',
+              result.toString(),
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -38,8 +55,9 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-
               child: TextField(
+                controller: textEditingController,
+
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   hintText: 'please enter the amount in USD',
@@ -58,9 +76,7 @@ class CurrencyCoverterMateralPage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(10, 7, 10, 10),
               child: ElevatedButton(
                 onPressed: () {
-                  if (kDebugMode) {
-                    print('buttom clicked');
-                  }
+                  result = double.parse(textEditingController.text) * 81;
                 },
 
                 style: TextButton.styleFrom(
